@@ -7,7 +7,7 @@
  * @param {*} params.strapi
  */
 async function bootstrapLifecycles({ strapi }) {
-	strapi.config.get('plugin.io.contentTypes', []).forEach((ct) => {
+	strapi.config.get('plugin::io.contentTypes', []).forEach((ct) => {
 		const uid = ct.uid ? ct.uid : ct;
 
 		const subscriber = {

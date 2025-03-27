@@ -10,7 +10,7 @@ const { pluginId } = require('../utils/pluginId');
  * @param {*} params.strapi
  */
 async function bootstrapIO({ strapi }) {
-	const settings = strapi.config.get(`plugin.${pluginId}`);
+	const settings = strapi.config.get(`plugin::${pluginId}`);
 
 	// initialize io
 	const io = new SocketIO(settings.socket.serverOptions);
